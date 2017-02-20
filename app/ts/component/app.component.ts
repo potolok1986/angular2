@@ -16,6 +16,7 @@ export class Item {
 
 export class AppComponent {
     name: string = "Aleksandr";
+    age: number = 25;
     items: Item[] = [
         {purchase: "Хлеб", done: false, price: 15.9},
         {purchase: "Масло", done: false, price: 60},
