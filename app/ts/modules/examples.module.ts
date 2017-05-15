@@ -7,9 +7,10 @@ import {LocalVariablesChild} from "../component/example/local.variables.componen
 import {LocalMainVariables} from "../component/example/loacl.main.variables.component";
 import {Example} from "../component/example/example.main";
 import {CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
-    imports:      [ CommonModule],
+    imports:      [ CommonModule,FormsModule],
     declarations: [Example,ExampleMainComponent,ExampleChild,Example1Child,Example1Main,LocalVariablesChild,LocalMainVariables],
     exports:    [ Example ]
 })
