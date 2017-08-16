@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {DataPurchase} from "../data/data.purchase";
 import {Purchase} from "../services/purchase";
+import {Response} from "@angular/http";
 
 @Component({
     selector: "purchase-app",
@@ -18,7 +19,9 @@ export class AppComponent {
     }
 
     ngOnInit() {
-        this.items = this.dataPurchase.getData();
+        this.dataPurchase.getData().subscribe((data: Response)=> {
+            this.items = data.json();
+        });
     }
 
     addItem(text: string, price: number, count: number): void {

@@ -10,7 +10,7 @@ import {LogService} from "../../services/log"
 export class PhoneComponent{
     items: Phone[] = [];
     constructor(public dataService: DataService){}
-    ngOnInit(){
+    getData(){
         this.items = this.dataService.getData();
     }
 }

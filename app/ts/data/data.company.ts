@@ -1,15 +1,11 @@
 import {Injectable} from '@angular/core';
-import {CompanyMadePhones} from "../services/companyMadePhones";
+import {Http} from "@angular/http";
 
 @Injectable()
 export class DataCompanyService {
-
-    constructor() {
+    constructor(private http: Http) {
     };
-
-    private data: CompanyMadePhones[] = [{name: "Apple"}, {name: "Huawei"}, {name: "Xiaomi"}, {name: "Samsung"}, {name: "LG"}, {name: "Motorola"}, {name: "Alcatel"}];
     getData(){
-        return this.data;
+        return this.http.get("json/cellPhoneCompanies.json");
     }
-
 }

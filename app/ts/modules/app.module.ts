@@ -7,10 +7,11 @@ import {ExampleModule} from "./examples.module";
 import {DirectivesModule} from "./directives.module";
 import {PhoneComponent} from "../component/example/phone.component";
 import {FormsComponentModule} from "./forms.modules";
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
-    imports:      [ BrowserModule, FormsModule,ExampleModule,DirectivesModule,FormsComponentModule],
+    imports:      [ BrowserModule, FormsModule,ExampleModule,DirectivesModule,FormsComponentModule,HttpModule],
     declarations: [ AppComponent, Child, PhoneComponent],
     bootstrap:    [ AppComponent ]
 })
