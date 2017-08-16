@@ -19,9 +19,13 @@ export class AppComponent {
     }
 
     ngOnInit() {
-        this.dataPurchase.getData().subscribe((data: Response)=> {
-            this.items = data.json();
-        });
+        this.dataPurchase.getData().subscribe(
+            (data: Response) => {
+                this.items = data.json();
+            },
+            err => {
+                console.log(err)
+            });
     }
 
     addItem(text: string, price: number, count: number): void {
