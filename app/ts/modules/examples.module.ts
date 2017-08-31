@@ -8,10 +8,18 @@ import {LocalMainVariables} from "../component/example/loacl.main.variables.comp
 import {Example} from "../component/example/example.main";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {PhoneComponent} from "../component/example/phone.component";
 
 @NgModule({
     imports:      [ CommonModule,FormsModule],
-    declarations: [Example,ExampleMainComponent,ExampleChild,Example1Child,Example1Main,LocalVariablesChild,LocalMainVariables],
+    declarations: [Example,
+        ExampleMainComponent,
+        ExampleChild,
+        Example1Child,
+        Example1Main,
+        LocalVariablesChild,
+        LocalMainVariables,
+        PhoneComponent ],
     exports:    [ Example ]
 })
 export class ExampleModule { }

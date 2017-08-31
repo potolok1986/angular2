@@ -6,6 +6,6 @@ export class DataPurchase {
     }
 
     getData() {
-        return this.http.get("json/purchase1.json")
+        return this.http.get("json/purchase.json")
     }
 }

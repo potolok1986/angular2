@@ -1,0 +1,50 @@
+<div class="page-header">
+    <child-comp [name]="name" [age]="age"></child-comp>
+    <h1> Список покупок </h1>
+</div>
+<div class="panel">
+    <div class="form-inline">
+        <div class="form-group">
+            <div class="col-md-8">
+                <input type="text" [(ngModel)]="text" placeholder="Название" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8">
+                <input type="text" [(ngModel)]="price" placeholder="Цена" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8">
+                <div  style="display: flex">
+                    <input type="text" [(ngModel)]="counter" placeholder="Количество" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-8">
+                <button class="btn btn-default" (click)="addItem(text,price,counter)">Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Предмет</th>
+        <th>Цена</th>
+        <th>Куплено</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items">
+        <th>{{item.purchase}}</th>
+        <th>{{item.price}}</th>
+        <th>{{item.count}}</th>
+        <th>
+            <input type="checkbox" [(ngModel)]="item.done">
+        </th>
+    </tr>
+    </tbody>
+</table>
